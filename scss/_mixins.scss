@@ -1,0 +1,25 @@
+@import "_config";
+
+@mixin minScreenSize ($minWidth) {
+    @media (min-width: $minWidth){
+        @content;
+    }
+}
+
+@mixin maxsSreenSize ($maxWidth) {
+    @media (max-width: $maxWidth){
+        @content;
+    }
+}
+
+@mixin maxWidth ($width) {
+    width: 100%;
+    max-width: $width;
+}
+
+@mixin flexCenter ($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}

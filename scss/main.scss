@@ -1,0 +1,265 @@
+@import "_config";
+@import "_font-proporties";
+@import "_mixins";
+
+
+body > *:not(.main) {
+    @include maxsSreenSize (612px) {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+}
+
+body {
+    background-color: map-get($clr, primary);
+    background-image: url(/assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 0 -22rem;
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        background-image: url(/assets/bg-main-tablet.png);
+        background-size: auto;
+        background-position: -40rem -30rem;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        background-image: url(/assets/bg-main-desktop.png);
+        background-size: auto;
+        background-position: 70% 100%;
+    }
+}
+
+body > * {
+    @include maxWidth (50rem);
+    margin: 0 auto;
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        @include maxWidth (144rem);
+        padding: 0 3.6rem 0 3.6rem;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        padding: 0 16.56rem 0 16.5rem;
+    }
+}
+
+.header {
+    padding-top: 4rem;
+    margin-bottom: 16.6rem;
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        padding-top: 6.2rem;
+        margin-bottom: 24.9rem;
+        background-image: url(/assets/bg-pattern-1.svg);
+        background-size: 26.5rem;
+        background-position: 107% -3rem;
+        background-repeat: no-repeat;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        margin-bottom: 32.1rem;
+        background-image: url(/assets/bg-pattern-1.svg);
+        background-size: 31rem;
+        background-position: 100% -4rem;
+        background-repeat: no-repeat; 
+    }
+
+    &__title {
+        margin-top: 6.4rem;
+        margin-bottom: 2rem;
+
+        @include minScreenSize ($min-screen-size-tablet) {
+            margin-top: 9.5rem;
+            margin-bottom: 2.8rem;
+        }
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            margin-top: 12.7rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__title, &__paragraph {
+        @include maxWidth (51rem);
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            max-width: 85rem;
+        }
+    }
+}
+
+.main {
+    position: relative;
+    background-color: map-get($clr, secondary);
+    background-image: url(/assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 28rem;
+    margin-bottom: 56rem;
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        @include maxWidth (91%);
+        min-height: 60rem;
+        margin-bottom: 18.3rem;
+        background-position: 23rem -3rem;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        max-width: min(77%, 110rem);
+        margin-bottom: 20.2rem;
+        background-size: 31rem;
+        background-position: 33.5rem -4rem;
+        margin-bottom: 16rem;
+    }
+
+    &__image {
+        @include maxWidth (20.9rem);
+        position: relative;
+        top: -10rem;
+        margin: 0 auto 0 auto;
+
+        @include minScreenSize ($min-screen-size-tablet) {
+            max-width: 27rem;
+            position: absolute;
+            left: 6rem;
+            top: -14rem;
+        }
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            max-width: 31.2rem;
+            top: -21.5rem;
+            left: 10rem;
+        }
+    }
+}
+
+.main, .main-article {
+    border-radius: 1.2rem;
+}
+
+.main-article {
+    @include maxWidth (37.5rem);
+    background-color: map-get($clr, neutral-700);
+    padding: 4.8rem 3.65rem 4.8rem 3.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    position: absolute;
+    top: 38rem;
+    right: 50%;
+    transform: translateX(50%);
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        transform: none;
+        max-width: 39.9rem;
+        top: 15rem;
+        right: 6rem;
+        padding: 4.8rem;
+        margin-bottom: 0;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        max-width: 44.6rem;
+        padding: 5.8rem 5.9rem 4.8rem 5.4rem;
+        top: 9rem;
+        right: 9rem;
+    }
+
+    .wraper {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+        padding-left: 0.5rem;
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            margin-top: 3rem;
+            margin-bottom: 3rem; 
+        }
+    }
+
+    &__btn {
+        border-radius: 1.2rem;
+        min-height: 6.1rem;
+        text-align: center;
+        @include flexCenter (row);
+        gap: 0.8rem;
+    }
+
+    &__btn:nth-of-type(1) {
+        background-color: map-get($clr, secondary);
+
+        &:hover {
+            background-color: map-get($clr, accent-600);
+        }
+    }
+
+    &__btn:nth-of-type(2) {
+        background-color: map-get($clr, primary);
+
+        &:hover {
+            background-color: map-get($clr, neutral-800);
+        }
+    }
+}
+
+.footer {
+    margin-bottom: 8rem;
+
+    @include minScreenSize ($min-screen-size-tablet) {
+        margin-bottom: 8.5rem;
+    }
+
+    @include minScreenSize ($min-screen-size-desktop) {
+        margin-bottom: 9.1rem;
+        @include flexCenter (row);
+        gap: 13.8rem
+    }
+
+    .wraper {
+        @include minScreenSize ($min-screen-size-tablet) {
+            @include flexCenter (row);
+            justify-content: space-between;
+            padding-top: 3.2rem;
+        }
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            @include flexCenter (row);
+            justify-content: space-between;
+            width: 100%;
+            gap: 4rem;
+            padding-top: 4rem;
+        }
+    }
+
+    &__info {
+        margin: 3.2rem 0 6.4rem 0;
+        @include maxWidth (30rem);
+
+        @include minScreenSize ($min-screen-size-tablet) {
+            margin: 0;
+            @include maxWidth (36.6rem);
+        }
+
+        @include minScreenSize ($min-screen-size-desktop) {
+            max-width: 33.2rem;
+        }
+    }
+
+    &__soc-icons {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.soc-icon {
+    fill: map-get($clr, secondary);
+
+    &:hover {
+        fill: map-get($clr, neutral-700);
+        cursor: pointer;
+    }
+}
+
+

@@ -1,0 +1,102 @@
+ @import "_mixins";
+ @import "_config";
+
+.lg-title {
+   font-size: map-get($fs, fs-s-title);
+   color: map-get($clr, secondary);
+   font-weight: $fw-bold;
+   line-height: 4.8rem;
+   letter-spacing: -.0455rem;
+   
+   @include minScreenSize ($min-screen-size-tablet) {
+      font-size: map-get($fs, fs-m-title);
+      line-height: 6.4rem;
+      letter-spacing: -.0727rem;
+   }
+
+   @include minScreenSize ($min-screen-size-desktop) {
+      font-size: map-get($fs, fs-l-title);
+      line-height: 8.8rem;
+      letter-spacing: -.1rem;
+   }
+};
+
+.paragraph-responsive {
+   font-size: map-get($fs, fs-s);//
+   color: map-get($clr, secondary);//
+   line-height: 2.6rem;//
+
+   @include minScreenSize ($min-screen-size-tablet) {
+      font-size: map-get($fs, fs-m);//
+      line-height: 2.8rem;//
+   }
+
+   @include minScreenSize ($min-screen-size-desktop) {
+      font-size: map-get($fs, fs-l);//
+      line-height: 3.4rem;//
+   }
+};
+
+.sm-title {
+   font-size: map-get($fs, fs-xxl);
+   color: map-get($clr, primary);
+   font-weight: $fw-bold;
+   line-height: 4rem;
+
+   @include minScreenSize ($min-screen-size-desktop) {
+      font-size: map-get($fs, fs-s-title);
+      line-height: 5.2rem;
+   }
+};
+
+.main-paragraph {
+   color: map-get($clr, primary);
+   font-size: map-get($fs, fs-m);//
+   line-height: 2.8rem;
+
+   @include minScreenSize ($min-screen-size-desktop) {
+      font-size: map-get($fs, fs-l);//
+      line-height: 3.4rem;
+   }
+}
+
+.lg-paragraph {
+   font-size: map-get($fs, fs-m-title);
+   color: map-get($clr, primary);
+   line-height: 5.2rem;
+}
+
+.sm-paragraph {
+   font-size: map-get($fs, fs-l);
+   color: map-get($clr, primary);
+   line-height: 3.2rem;
+   letter-spacing: -.02rem;
+}
+
+.main-btn-paragraph {
+   font-size: map-get($fs, fs-m);
+   color: map-get($clr, primary);
+   font-weight: $fw-bold;
+   line-height: 3.2rem;
+   letter-spacing: -.018rem;
+}
+
+.cl-secondary {
+   color: map-get($clr, secondary);
+}
+
+.paragraph {
+   font-size: map-get($fs, fs-s);
+   color: map-get($clr, secondary);//
+   line-height: 2.6rem;
+}
+
+.fw-bold {
+   font-weight: $fw-bold;
+}
+
+
+
+
+
+ 

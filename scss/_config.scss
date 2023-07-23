@@ -1,0 +1,70 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+//font colors
+$clr: (
+    "primary": hsla(20, 33%, 98%, 1),
+    "secondary":hsla(244, 23%, 12%, 1),
+    "accent-600": hsla(177, 68%, 64%, 1),
+    "neutral-700": hsla(12, 94%, 65%, 1),
+    "neutral-800": hsla(33, 100%, 70%, 1)
+);
+//font sizes
+$fs: (
+    "fs-s": 1.6rem,
+    "fs-m": 1.8rem,
+    "fs-l": 2rem,
+    "fs-xxl": 3.2rem,
+    "fs-s-title": 4rem,
+    "fs-m-title": 6.45rem,
+    "fs-l-title": 8.8rem,
+    "fs-main-btn": 1.6rem
+);
+
+//Screen break points//
+$min-screen-size-tablet: 613px;
+$min-screen-size-desktop: 1025px; 
+
+//font weights
+$fw-regular: 400;
+$fw-bold: 700;
+
+$ff-primary: "IBM Plex Sans", "sans-serif";
+
+// Resets
+body,html{
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+html{
+    font-size: 62.5%;
+    font-weight: $fw-regular;
+    font-family: $ff-primary;
+    color: black;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+img{
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
