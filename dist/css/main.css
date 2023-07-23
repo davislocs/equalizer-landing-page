@@ -271,20 +271,20 @@ img {
 
 body {
   background-color: hsl(20, 33%, 98%);
-  background-image: url(/../assets/bg-main-mobile.png);
+  background-image: url("/../assets/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-position: 0 -22rem;
 }
 @media (min-width: 613px) {
   body {
-    background-image: url(/../assets/bg-main-tablet.png);
+    background-image: url("/../assets/bg-main-tablet.png");
     background-size: auto;
     background-position: -40rem -30rem;
   }
 }
 @media (min-width: 1025px) {
   body {
-    background-image: url(/../assets/bg-main-desktop.png);
+    background-image: url("/../assets/bg-main-desktop.png");
     background-size: auto;
     background-position: 70% 100%;
   }
@@ -316,7 +316,7 @@ body > * {
   .header {
     padding-top: 6.2rem;
     margin-bottom: 24.9rem;
-    background-image: url(/../assets/bg-pattern-1.svg);
+    background-image: url("/../assets/bg-pattern-1.svg");
     background-size: 26.5rem;
     background-position: 107% -3rem;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@ body > * {
 @media (min-width: 1025px) {
   .header {
     margin-bottom: 32.1rem;
-    background: url(/../assets/bg-pattern-1.svg);
+    background: url("/../assets/bg-pattern-1.svg");
     background-size: 31rem;
     background-position: 100% -4rem;
     background-repeat: no-repeat;
@@ -360,7 +360,7 @@ body > * {
 .main {
   position: relative;
   background-color: hsl(244, 23%, 12%);
-  background-image: url(/../assets/bg-pattern-2.svg);
+  background-image: url("/../assets/bg-pattern-2.svg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 28rem;
