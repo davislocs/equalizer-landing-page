@@ -12,18 +12,18 @@ body > *:not(.main) {
 
 body {
     background-color: map-get($clr, primary);
-    background-image: url(/assets/bg-main-mobile.png);
+    background-image: url(assets/bg-main-mobile.png);
     background-repeat: no-repeat;
     background-position: 0 -22rem;
 
     @include minScreenSize ($min-screen-size-tablet) {
-        background-image: url(/assets/bg-main-tablet.png);
+        background-image: url(assets/bg-main-tablet.png);
         background-size: auto;
         background-position: -40rem -30rem;
     }
 
     @include minScreenSize ($min-screen-size-desktop) {
-        background-image: url(/assets/bg-main-desktop.png);
+        background-image: url(assets/bg-main-desktop.png);
         background-size: auto;
         background-position: 70% 100%;
     }
@@ -50,7 +50,7 @@ body > * {
     @include minScreenSize ($min-screen-size-tablet) {
         padding-top: 6.2rem;
         margin-bottom: 24.9rem;
-        background-image: url(/assets/bg-pattern-1.svg);
+        background-image: url(assets/bg-pattern-1.svg);
         background-size: 26.5rem;
         background-position: 107% -3rem;
         background-repeat: no-repeat;
@@ -58,7 +58,7 @@ body > * {
 
     @include minScreenSize ($min-screen-size-desktop) {
         margin-bottom: 32.1rem;
-        background-image: url(/assets/bg-pattern-1.svg);
+        background-image: url(assets/bg-pattern-1.svg);
         background-size: 31rem;
         background-position: 100% -4rem;
         background-repeat: no-repeat; 
@@ -91,7 +91,7 @@ body > * {
 .main {
     position: relative;
     background-color: map-get($clr, secondary);
-    background-image: url(/assets/bg-pattern-2.svg);
+    background-image: url(assets/bg-pattern-2.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 28rem;
